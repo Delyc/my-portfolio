@@ -5,7 +5,7 @@ const educationSchema = new mongoose.Schema({
         required: true,
     },
     startDate:{
-        type: Date,
+        type: Date,  //date format: YYYY-MM-DD
         required: true,
     },
     endDate:{
@@ -16,8 +16,8 @@ const educationSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    relevantCourse:{
-        type: String,
+    relevantCourse:{   
+        type: [],
         required: true,
     }
 

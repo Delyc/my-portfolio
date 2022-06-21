@@ -10,7 +10,7 @@ const projectSchema = new mongoose.Schema({
     },
     banner:{
         type: String,
-        required: true,
+        default: 'https://res.cloudinary.com/dci8tsnsb/image/upload/v1650072628/n7ac9rklqcyrzrs2qlay.jpg'
     },
     title:{
         type: String,

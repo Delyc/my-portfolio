@@ -1,5 +1,5 @@
 import mongoose, { Mongoose } from "mongoose";
-const Mongoose = mongoose.Schema;
+const Mongoose = mongoose;
 import { workHistory } from "../models/workHistory";
 
 export const addWorkHistory = async (req, res) => {
@@ -17,7 +17,7 @@ export const addWorkHistory = async (req, res) => {
 
 
 export const getWorkHistoryById = async(req,res)=>{
-    if(!req.params.id || !Mongoose.Types.ObjectId.isValid(req.params.id)){
+    if(!req.params.id || !Mongoose.isValidObjectId(req.params.id)){
         return res.status(400).json({
             success:false,
             data:{
@@ -68,7 +68,7 @@ export const updateWorkHistory = async(req, res) =>{
         })
     }
 
-    const updateWorkHistory = await Todo.findByIdAndUpdate(id,req.body, {
+    const updateWorkHistory = await workHistory.findByIdAndUpdate(id,req.body, {
         new: true,
     })
     return res.status(200).json({
