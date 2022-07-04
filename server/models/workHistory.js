@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
 const workHistorySchema = new mongoose.Schema({
-    company: {
+    companyName: {
         type: String,
         required: true
     },
-    position: {
+    jobTitle: {
         type: String,
         required: true,
     },
@@ -16,10 +16,18 @@ const workHistorySchema = new mongoose.Schema({
         type: Date,
         required: true,
     },
-    description: {
+    jobDescription: {
         type: String,
         required: true,
     },
+    jobLocation:{
+        type: String,
+        required: true,
+    },
+    technologies:{
+        type: String,
+        required: true,
+    }
 
 },
 { timestamps: true, toJSON: { virtuals: true }, toObject: { virtuals: true } }

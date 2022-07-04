@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 const skillsSchema = new mongoose.Schema({
-    name: {
+    skillName: {
         type: String,
         required: true,
     },

@@ -6,6 +6,7 @@ import projectRouter from "./routes/projects.js";
 import testimonyRouter from "./routes/testimony.js";
 import skillRouter from "./routes/skills.js";
 import educationRouter from "./routes/education.js";
+import workRouter from "./routes/work-history.js";
 import swaggerUi from "swagger-ui-express";
 import swaggerJSDoc from "swagger-jsdoc";
 import { swaggeroptions } from "./config/base.js";
@@ -30,6 +31,7 @@ app.use("/api/testimony", testimonyRouter);
 app.use("/api/skills", skillRouter)
 app.use("/api/education", educationRouter)
 app.use("/api/achievemt", achievementRouter)
+app.use("/api/work-history", workRouter)
 
 mongoose
   .connect(process.env.MONGOURL, {

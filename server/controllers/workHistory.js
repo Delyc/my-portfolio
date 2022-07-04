@@ -1,6 +1,6 @@
-import mongoose, { Mongoose } from "mongoose";
+import mongoose from "mongoose";
 const Mongoose = mongoose;
-import { workHistory } from "../models/workHistory";
+import { workHistory } from "../models/workHistory.js";
 
 export const addWorkHistory = async (req, res) => {
     let obj = req.body;

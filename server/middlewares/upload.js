@@ -29,6 +29,7 @@ const streamUpload = (req) =>
 
 export const UploadMiddleware = async (req, res, next) => {
   const result = await streamUpload(req);
+  console.log(result)
   if (result) {
     req.file.path = result.url;
     req.file.publicId = result.public_id;

@@ -8,7 +8,7 @@ const testimonySchema = new mongoose.Schema({
         type: String, 
         default: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWo3luud5KPZknLR5zdUUwzvYBztWgTxrkbA&usqp=CAU'
     },
-    name:{
+    empname:{
         type: String,
         required: true,
     },
