@@ -25,7 +25,7 @@ function Projects() {
   }, []);
 
   return (
-    <div className="parent-project">
+    <div className="parent-project" id="projects">
         <div className="project-title">
         <h1>Projects</h1>
         </div>

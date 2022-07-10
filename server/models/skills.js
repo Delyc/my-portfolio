@@ -8,6 +8,10 @@ const skillsSchema = new mongoose.Schema({
         type: Number,  //date format: YYYY-MM-DD
         required: true,
     },
+    category:{
+        type: String,
+        required: true,
+    }
    
 
 },

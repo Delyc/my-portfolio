@@ -5,13 +5,12 @@ import axiosBase from '../../api';
 function Skills() {
      
     const [skill, setSkill] = useState()
-    // const handleBtns=(e)=>{
-    //     let skill =e.target.value
-    //     if (skill === 'Backend'){
-    //         setSkill
 
-    //     }
-    // }
+
+    const handleFilter = (term)=>{
+        const skills = skill.filter((skill)=>skill?.category===term)
+        setSkill(skills)
+        }
     useEffect(() => {
         const getSkills = async () => {
             try{
@@ -28,36 +27,37 @@ function Skills() {
     }, [])
 
   return (
-    <div className='parent-skills'>
+    <div className='parent-skills' id='skills'>
         <div className='skills'>
         <h1>Skills</h1>
         <div className='skills-classification'>
             <ul>
                 <li className='back'>
-                    <button value="Backend">Backend</button>
+                    <button onClick={(e)=>{handleFilter("backend")}}  value="Backend">Backend</button>
                     
                 </li>
                 <li>
-                <button value="Frontend">Frontend</button>
+                <button onClick={(e)=>{handleFilter("frontend")}} value="Frontend">Frontend</button>
                 </li>
+
                 <li>
-                    Frontend
+                <button onClick={(e)=>{handleFilter("frontend")}} value="Frontend">Other</button>
                 </li>
-                <li>
-                    Other
-                </li>
+
+                
+      
             </ul>
         </div>
         <div className='skills-align'>
             {skill ? (
-                <div>
+                <div className='test-skills'>
                     {skill.map((skl, index) => {
-                        return (<div key={index}>
+                        return (<div key={index} className="skills-comb">
                             <div className='skills-bar'> 
             <p>{skl.skillName} <span>{skl.percentage} %</span></p>
         <Line className='one-bar' percent={`${skl.percentage}`} strokeWidth="1" strokeColor="#3A89D1" />
         </div>
-                            <p>{skl.percentage}</p>
+                            
                         </div>
                         )
                     })}

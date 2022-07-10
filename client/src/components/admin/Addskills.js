@@ -11,6 +11,11 @@ function Addskills() {
     setPercentage(e.target.value);
   };
 
+  const [category, setCategory] = useState("");
+  const onChangeCategory = (e) => {
+    setCategory(e.target.value);
+  };
+
   const addSkill = async (data) => {
     try {
       const res = await axiosBase.post("/skills", data);
@@ -22,10 +27,12 @@ function Addskills() {
   const onSubmit = (e) => {
     setSkillName("");
     setPercentage("");
+    setCategory('')
     e.preventDefault();
     const regData = {
       skillName: skillName,
       percentage: percentage,
+      category:category
     };
     addSkill(regData);
     console.log(regData);
@@ -50,6 +57,14 @@ function Addskills() {
             onChange={(e) => onChangePercent(e)}
             type="number"
             placeholder="percentage"
+          />
+
+<input
+            name="category"
+            value={category}
+            onChange={(e) => onChangeCategory(e)}
+            type="text"
+            placeholder="category"
           />
 
           <button onClick={(e) => onSubmit(e)} type="submit">

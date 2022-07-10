@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, animateScroll as scroll } from "react-scroll";
 import Hire from "../../modals/Hire";
 import "./navbar.css";
 const NavBar = () => {
@@ -40,27 +40,88 @@ const NavBar = () => {
         </div>
         <ul className="list">
             <li>
-                Home
+              <Link className="list-link"
+              activeClass="active"
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}>
+                 Home
+              </Link>
+               
             </li>
         
             <li className="about">
-                About
+            <Link  className="list-link"
+              activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}>
+                 About
+              </Link>
             </li>
         
             <li>
-                Resume
+            <Link  className="list-link"
+              activeClass="active"
+              to="skills"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}>
+                Skills
+              </Link>
             </li>
         
             <li>
+            <Link  className="list-link"
+              activeClass="active"
+              to="projects"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}>
                 Projects
+              </Link>
+            </li>
+
+            <li>
+            <Link  className="list-link"
+              activeClass="active"
+              to="experience"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}>
+                Experience
+              </Link>
             </li>
      
             <li>
-                Testimonial
+            <Link  className="list-link"
+              activeClass="active"
+              to="testimony"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}>
+                 Testimonial
+              </Link>
             </li>
         
             <li>
+            <Link  className="list-link"
+              activeClass="active"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}>
                 Contact me
+              </Link>
             </li>
         </ul>
 

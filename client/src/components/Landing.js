@@ -18,7 +18,7 @@ function Landing() {
       <Skills />
       <Projects />
       <Experience />
-      <Testimony />
+      <Testimony id="testimony"/>
       <Contact />
 
     </>

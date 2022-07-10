@@ -55,6 +55,15 @@ nav {
     position: relative;
  
 }
+
+.list-link{
+   
+    cursor: pointer;
+}
+.list-link > .active {
+    border-bottom: 1px solid #333;
+    color: red;
+}
 .test{
     color: white;
 }

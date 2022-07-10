@@ -13,37 +13,37 @@ import Interest from "../Resume/Interest";
 function Experience() {
   return (
     <>
-      <div className="parent-experience">
+      <div className="parent-experience" id="experience">
         <div className="list-exp">
           <ul className="resume-ul">
             <li className="one-grp">
-              <NavLink to="/experience">
+              <NavLink className="one-grp-link" to="/experience">
                 <img src={experi} alt="" />
                 <h3>Experience</h3>
               </NavLink>
             </li>
             <li className="one-grp">
-              <NavLink to="/education">
+              <NavLink className="one-grp-link" to="/education">
                 <img src={education} alt="" />
                 <h3>Education</h3>
               </NavLink>
             </li>
             <li className="one-grp">
-            <NavLink to="/coming-soon">
+            <NavLink className="one-grp-link" to="/coming-soon">
             <img src={achievements} alt="" />
               <h3>Achievements</h3>
               </NavLink>
               
             </li>
             <li className="one-grp">
-            <NavLink to="/coming-soon">
+            <NavLink className="one-grp-link" to="/coming-soon">
             <img src={takequiz} alt="" />
               <h3>Blog/Store</h3>
               </NavLink>
               
             </li>
             <li className="one-grp">
-            <NavLink to="/coming-soon">
+            <NavLink className="one-grp-link" to="/coming-soon">
             <img src={interests} alt="" />
               <h3>Interest</h3>
               </NavLink>

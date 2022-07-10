@@ -70,6 +70,7 @@
   top: 5rem;
   min-height: 20vh;
   display: flex;
+ flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -127,8 +128,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
-  width: 50vw;
+  background-color: #3A89D1;
+  width: 80%;
+  border-radius: 3px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 .skills-classification ul{
   text-decoration: none;
@@ -139,6 +142,15 @@
 .skills-classification ul li{
  
   font-weight: bolder;
+  color: white;
+}
+.skills-classification ul li button{
+ 
+  font-weight: 400;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+  font-size: 1rem;
 }
 .back{
   color: #3A89D1;
@@ -148,7 +160,7 @@
   color: red;
   background-color: rgba(0, 0, 0, 0.205);
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-  height: 6vh;
+  height: 5vh;
   width: 7vw;
   border-radius: 3px;
   display: flex;
@@ -175,11 +187,26 @@
 }
 
 .skills-bar{
-  width: 50%;
+  width: 90%;
+  margin-top: -1rem;
 }
 .one-bar{
   width: 70%;
   height: 1vh;
+}
+.skills-comb{
+  
+  width: 50%;
+}
+
+.test-skills{
+  display: flex;
+  flex-wrap: wrap;
+  
+  
+ 
+
+  width: 100%;
 }
 .skills-bar p{
   color: white;
@@ -193,6 +220,7 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
 .skills{
@@ -320,6 +348,7 @@
   position: relative;
   top: 15rem;
   min-height: 20vh;
+ 
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -372,8 +401,20 @@
   overflow-y: scroll;
   
 }
+.coming-soon{
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  width: 50vw;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
 .list-exp{
   height: 100%;
+
 }
 
 
@@ -390,7 +431,7 @@
 }
 .testimonies{
   display: flex;
-
+  outline: thin solid red;
   width: 30%;
   gap: 1rem;
 }
@@ -540,6 +581,19 @@ input[type="text"], input[type="number"], input[type="email"], input[type="file"
   font-size: 15px;
   border: 1px solid rgba(255, 255, 255, 0.459);
   width: 100%;
+  color: white;
+}
+.one-grp-link{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:0;
+  font-size: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.459);
+  width: 100%;
+  color: white;
+  text-decoration: none;
 }
 .one-grp img{
   width: 3vw;

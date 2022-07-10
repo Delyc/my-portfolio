@@ -6,7 +6,7 @@ import me from '../../assets/me.jpeg'
 
 function Intro() {
   return (
-    <div className='parent-intro'>
+    <div className='parent-intro' id="home">
     <div className='intro'>
         <h1>Discover my art space</h1>
         <h3>Hi, I am <span>Delyce</span></h3>

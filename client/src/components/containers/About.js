@@ -1,10 +1,10 @@
 import React from "react";
 import experience from "../../assets/experience.png";
 import projects from "../../assets/projects.png";
-
+import Skills from '../containers/Skills'
 function About() {
   return (
-    <div className="parent-about">
+    <div className="parent-about" id="about">
       <div className="about-comp">
         <h1>About me</h1>
         <p>
@@ -30,6 +30,8 @@ function About() {
           </div>
         </div>
       </div>
+
+      
     </div>
   );
 }

@@ -5,7 +5,7 @@ import call from '../../assets/call.png'
 
 function Contact() {
   return (
-      <div className='parent-contact'>
+      <div className='parent-contact' id='contact'>
     <div>
         <div className='contact-'>
             <div className='contact-img'>
